@@ -10,7 +10,7 @@
 
 - name: Configure osquery APT repository
   apt_repository: >
-    repo='deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/{{ ansible_lsb.codename|lower }} {{ ansible_lsb.codename|lower }} main'
+    repo='deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/{{ ansible_distribution_release | lower }} {{ ansible_distribution_release | lower }} main'
     state=present
   tags: osquery
 
